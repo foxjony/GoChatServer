@@ -31,6 +31,8 @@ https://go-tour-ua.appspot.com
 https://go-tour-ua.appspot.com/list
 
 https://golang.org
+https://play.golang.org
+https://play.golang.org/p/jeKYspgp8wM
 https://ru.wikipedia.org/wiki/Go
 https://github.com/golang
 https://github.com/djherbis/nio
