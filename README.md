@@ -41,5 +41,8 @@ Golang - Xây dựng ứng dụng chat Server-Client với TCP
 - https://github.com/avelino/awesome-go
 - https://github.com/avelino/awesome-go#server-applications
 
+Разбираемся с новым sync.Map в Go 1.9
+- https://habr.com/ru/post/338718/
+
 Олег Облеухов — Как сделать высоконагруженный сервис, не зная количество нагрузки
 - https://www.youtube.com/watch?v=hy5OSruLqvU
