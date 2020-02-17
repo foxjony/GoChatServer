@@ -20,7 +20,10 @@ https://itproger.com/course/one-lesson/14
 - https://habr.com/ru/post/306840/
 
 Чат на iOS: используем сокеты
-- https://habr.com/ru/post/467909/
+- https://habr.com/ru/post/467909
+
+GoLang Terminal Messenger
+- https://github.com/Shivam010/GoLang-Terminal-Messenger
 
 Golang - Xây dựng ứng dụng chat Server-Client với TCP
 - https://www.youtube.com/watch?v=ibvtI3PSyno
