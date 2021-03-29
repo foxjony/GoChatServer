@@ -64,11 +64,11 @@ Room Chat - packagemain #20: Building a TCP Chat in Go
 - https://github.com/plutov/packagemain/tree/master/20-tcp-chat
 
 # Linux Build
-- ~# cd /home/go        - Перейти в директорию /home/go
-- /home/go# go build .  - Скомпилировать исходник server.go исполняемый файл *go
-- /home/go# ./go        - Запустить сервер (исполняемый файл *go)
+- ~# cd /home/go        `- Перейти в директорию /home/go`
+- /home/go# go build .  `- Скомпилировать исходник server.go исполняемый файл *go`
+- /home/go# ./go        `- Запустить сервер (исполняемый файл *go)`
 - 2021/03/28 10:22:03 TCP Server Started on port: 3000
-- [Ctrl+C]              - Остановить сервер
+- [Ctrl+C]              `- Остановить сервер`
 
 # Linux Auto Start
 - cd /usr/bin 		– Перейти в директорию /usr/bin
