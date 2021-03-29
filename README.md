@@ -55,3 +55,53 @@ Golang - Xây dựng ứng dụng chat Server-Client với TCP
 
 Олег Облеухов — Как сделать высоконагруженный сервис, не зная количество нагрузки
 - https://www.youtube.com/watch?v=hy5OSruLqvU
+
+Миллион WebSocket и Go
+- https://habr.com/ru/company/mailru/blog/331784/
+
+Room Chat - packagemain #20: Building a TCP Chat in Go
+- https://www.youtube.com/watch?v=Sphme0BqJiY
+- https://github.com/plutov/packagemain/tree/master/20-tcp-chat
+
+=== Linux Build ===
+~# cd ../home/go 			              - Перейти в директорию
+/home/go# go build . 		            - Скомпилировать исходник server.go исполняемый файл *go
+/home/go# ./go 				              - Запустить сервер (исполняемый файл *go)
+2021/03/28 10:22:03 TCP Server Started on port: 50013
+[Ctrl+C] 					                  - Остановить сервер
+
+=== Linux Auto Start ===
+cd /usr/bin 							          – Перейти в директорию /usr/bin
+nano run-server.sh 						      – Создаем файл run-server.sh с текстом:
+#!/bin/bash
+cd /home/go
+./go
+[Ctrl+s] 								            – Сохранить изменения в тексте
+[Ctrl+x] 								            – Выход из редактора
+
+chmod ugo+x run-server.sh 		      – Сменить права файла
+run_server.sh							          – Зауск сервера по созданному скрипту (проверка)
+
+systemctl								            – Показывает список запущенных служб
+cd /usr/lib/systemd/system		      – Переходим в директорию system
+nano run-server.service				      – Создаем файл run-server.service с текстом:
+[Unit]
+Description=Run Server
+After=multi-user.target
+[Service]
+Type=forking
+ExecStart=/usr/bin/run-server.sh
+Restart=always
+[Install]
+WantedBy=multi-user.target
+[Ctrl+s] 								            – Сохранить изменения в тексте
+[Ctrl+x] 								            – Выход из редактора
+
+systemctl daemon-reload					    – После изменений необходимо перечитать изменения
+systemctl enable run-server				  – Разрешить автозапуск сервиса run-server
+systemctl -q is-active run-server		– В crontab добавить команду стобы сервер сделал 
+										                  перезапуск сервиса в случае его остановки
+systemctl start run-server				  – Запустить сервис run-server
+systemctl status run-server				  – Cмотрим статус сервиса run-server
+(systemctl stop run-server				  – Остановить сервис run-server)
+reboot naw								          – Перезапуск Linux
