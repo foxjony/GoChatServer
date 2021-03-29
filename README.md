@@ -4,8 +4,8 @@
 - https://www.youtube.com/watch?v=eIiyTq4VHK4
 
 Изучение Go в одном видео уроке за 30 минут!
-https://www.youtube.com/watch?v=pfmxPtLIW34
-https://itproger.com/course/one-lesson/14
+- https://www.youtube.com/watch?v=pfmxPtLIW34
+- https://itproger.com/course/one-lesson/14
 
 Алексей Акулович — Плюсы и минусы Go, а также его применения в ВКонтакте
 - https://www.youtube.com/watch?v=2fxNbhy2gt0
@@ -64,11 +64,15 @@ Room Chat - packagemain #20: Building a TCP Chat in Go
 - https://github.com/plutov/packagemain/tree/master/20-tcp-chat
 
 # Linux Build
-- ~# cd ../home/go 	- Перейти в директорию
-- /home/go# go build . 	- Скомпилировать исходник server.go исполняемый файл *go
-- /home/go# ./go 	- Запустить сервер (исполняемый файл *go)
+Перейти в директорию /home/go
+- ~# cd /home/go
+Скомпилировать исходник server.go исполняемый файл *go
+- /home/go# go build .
+Запустить сервер (исполняемый файл *go)
+- /home/go# ./go
 - 2021/03/28 10:22:03 TCP Server Started on port: 3000
-- [Ctrl+C] 		- Остановить сервер
+Остановить сервер
+- [Ctrl+C]
 
 # Linux Auto Start
 - cd /usr/bin 		– Перейти в директорию /usr/bin
