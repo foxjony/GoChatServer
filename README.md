@@ -85,15 +85,17 @@ Room Chat - packagemain #20: Building a TCP Chat in Go
 - systemctl			              `– Показывает список запущенных служб`
 - cd /usr/lib/systemd/system	`– Переходим в директорию system`
 - nano run-server.service	    `– Создаем файл run-server.service с текстом:`
-- [Unit]
-- Description=Run Server
-- After=multi-user.target
-- [Service]
-- Type=forking
-- ExecStart=/usr/bin/run-server.sh
-- Restart=always
-- [Install]
-- WantedBy=multi-user.target
+```php
+[Unit]
+Description=Run Server
+After=multi-user.target
+[Service]
+Type=forking
+ExecStart=/usr/bin/run-server.sh
+Restart=always
+[Install]
+WantedBy=multi-user.target
+```
 - [Ctrl+s] 			`– Сохранить изменения в тексте`
 - [Ctrl+x] 			`– Выход из редактора`
 
