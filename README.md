@@ -102,5 +102,5 @@ Room Chat - packagemain #20: Building a TCP Chat in Go
 - systemctl -q is-active run-server	`– В crontab добавить команду стобы сервер сделал перезапуск сервиса в случае его остановки`
 - systemctl start run-server		`– Запустить сервис run-server`
 - systemctl status run-server		`– Cмотрим статус сервиса run-server`
-- (systemctl stop run-server		`– Остановить сервис run-server)`
+- systemctl stop run-server		  `– Остановить сервис run-server`
 - reboot naw				            `– Перезапуск Linux`
