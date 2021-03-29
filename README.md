@@ -59,7 +59,8 @@ Golang - Xây dựng ứng dụng chat Server-Client với TCP
 Миллион WebSocket и Go
 - https://habr.com/ru/company/mailru/blog/331784/
 
-Room Chat - packagemain #20: Building a TCP Chat in Go
+#Room Chat
+packagemain #20: Building a TCP Chat in Go
 - https://www.youtube.com/watch?v=Sphme0BqJiY
 - https://github.com/plutov/packagemain/tree/master/20-tcp-chat
 
