@@ -73,9 +73,11 @@ Room Chat - packagemain #20: Building a TCP Chat in Go
 # Linux Auto Start
 - cd /usr/bin 		    `– Перейти в директорию /usr/bin`
 - nano run-server.sh 	`– Создаем файл run-server.sh с текстом:`
-- #!/bin/bash
-- cd /home/go
-- ./go
+```php
+#!/bin/bash
+cd /home/go
+./go
+```
 - [Ctrl+s] 		`– Сохранить изменения в тексте`
 - [Ctrl+x] 		`– Выход из редактора`
 
