@@ -7,6 +7,9 @@
 - https://www.youtube.com/watch?v=pfmxPtLIW34
 - https://itproger.com/course/one-lesson/14
 
+Создание сайта на Go в одном видео! Разработка программ на Golang
+- https://www.youtube.com/watch?v=mBLpAx06l44
+
 Алексей Акулович — Плюсы и минусы Go, а также его применения в ВКонтакте
 - https://www.youtube.com/watch?v=2fxNbhy2gt0
 
