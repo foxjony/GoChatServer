@@ -21,18 +21,18 @@ var big = make([]byte, 1<<20)		// Allocate 1 MB
 type commandID int
 
 const (
-	CMD_USER commandID = iota		// 0
-	CMD_ORDER	                 	// 1
-	CMD_LIST						// 2
-	CMD_MSG							// 3
-	CMD_QUIT						// 4
-	CMD_DEL							// 5
-	CMD_MEM							// 6
-	CMD_PING						// 7
+	CMD_USER commandID = iota	// 0
+	CMD_ORDER	                // 1
+	CMD_LIST			// 2
+	CMD_MSG				// 3
+	CMD_QUIT			// 4
+	CMD_DEL				// 5
+	CMD_MEM				// 6
+	CMD_PING			// 7
 )
 
 type command struct {
-	id     commandID				// 0-7
+	id     commandID		// 0-7
 	client *client
 	args   []string
 }
@@ -79,11 +79,11 @@ func (c *client) readInput() {
 			case "/order":  c.commands <- command{id: CMD_ORDER, client: c, args: args}
 			case "/list": 	c.commands <- command{id: CMD_LIST,  client: c,}
 			case "/msg":   	c.commands <- command{id: CMD_MSG,   client: c, args: args}
-			case "/quit":  	c.commands <- command{id: CMD_QUIT,	 client: c,}
+			case "/quit":  	c.commands <- command{id: CMD_QUIT,  client: c,}
 			case "/del":  	c.commands <- command{id: CMD_DEL,   client: c,}
 			case "/mem":  	c.commands <- command{id: CMD_MEM,   client: c,}
 			case "/ping":  	c.commands <- command{id: CMD_PING,  client: c, args: args}
-			default:		c.err(fmt.Errorf("Unknown Command %s", cmd))
+			default:	c.err(fmt.Errorf("Unknown Command %s", cmd))
 		}
 	}
 }
@@ -194,9 +194,9 @@ func (s *server) del(c *client) {
 	start := time.Now()
 	//log.Printf("Del")						// 875ns (Пусто)	// 84.002µs (Код виміру)
 	//log.Printf("Del Del Del Del Del Del Del Del Del Del ")	// 90.419µs (Код виміру)
-	duration := time.Since(start)			// Тривалість (duration)
-	fmt.Println(duration)					// Відформатована строка, наприклад, "2h3m0.5s" або "4.503μs"
-	//fmt.Println(duration.Nanoseconds())	// Nanoseconds як int64 (84002)
+	duration := time.Since(start)					// Тривалість (duration)
+	fmt.Println(duration)						// Відформатована строка, наприклад, "2h3m0.5s" або "4.503μs"
+	//fmt.Println(duration.Nanoseconds())				// Nanoseconds як int64 (84002)
 }
 
 func (s *server) mem(c *client) {
@@ -210,9 +210,9 @@ func (s *server) mem(c *client) {
 	Тобто це та пам'ять, яку, теоретично, можна віддати назад операційній системі.
 	*/
 
-	var ms1, ms2 runtime.MemStats
-    big = nil 						// Drop the link to 1 MB (1 куча = 16 MB, 16*66.4 = 1 GB)
-    runtime.GC()					// Force GC
+    var ms1, ms2 runtime.MemStats
+    big = nil 					// Drop the link to 1 MB (1 куча = 16 MB, 16*66.4 = 1 GB)
+    runtime.GC()				// Force GC
     runtime.ReadMemStats(&ms1)
     debug.FreeOSMemory()			// Force memory release (Примусове вивільнення пам'яті)
     runtime.ReadMemStats(&ms2)
@@ -223,12 +223,12 @@ func (s *server) mem(c *client) {
     fmt.Println("Idle memory before:    ", ms1.HeapIdle)		// Куча Зайнято До
     fmt.Println("Idle memory after:     ", ms2.HeapIdle)		// Куча Зайнято Після
     fmt.Println("Idle memory delta:     ", int64(ms2.HeapIdle)-int64(ms1.HeapIdle))
-    fmt.Println("Released memory before:", ms1.HeapReleased)	// Куча Свобідно До
-    fmt.Println("Released memory after: ", ms2.HeapReleased)	// Куча Свобідно Після
+    fmt.Println("Released memory before:", ms1.HeapReleased)		// Куча Свобідно До
+    fmt.Println("Released memory after: ", ms2.HeapReleased)		// Куча Свобідно Після
     fmt.Println("Released memory delta: ", ms2.HeapReleased - ms1.HeapReleased)
 
 	/*
-	1MB in bytes:  			 1048576
+	1MB in bytes:  		1048576
 	Idle memory before:  	66404352
 	Idle memory after:  	66404352
 	Idle memory delta:  	       0
