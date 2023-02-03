@@ -21,4 +21,6 @@ https://github.com/plutov/packagemain/tree/master/20-tcp-chat
 			  Відправити повідомлення всім в Замовленні чи Кімнаті.
 /quit 			- Disconnect from the Chat Server.
 			  Відключитися від Чат Сервера.
-/ping <0|0|0|0> 	- Ping для підтримки зв'язку з сервером та передача gps координат 0|0|0|0
+/ping <0|0|0|0|0> 	- Ping to maintain communication with the server and transfer gps coordinates
+			  Ping для підтримки зв'язку з сервером та передача gps координат 
+			  "Lat|Lon|Altitude|Accuracy|Speed"
