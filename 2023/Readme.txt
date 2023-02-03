@@ -20,5 +20,5 @@ https://github.com/plutov/packagemain/tree/master/20-tcp-chat
 /msg <msg> 		- Broadcast message to everyone in a Order or Room.
 			  Відправити повідомлення всім в Замовленні чи Кімнаті.
 /quit 			- Disconnect from the Chat Server.
-			  Відключитися від Чат Сервера. 
+			  Відключитися від Чат Сервера.
 /ping <0|0|0|0> 	- Ping для підтримки зв'язку з сервером та передача gps координат 0|0|0|0
