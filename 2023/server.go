@@ -1,4 +1,4 @@
-﻿// === Go TCP Chat Server (178.238.225.218 port 50013) ===
+﻿// === Go TCP Chat Server ===
 // (c) Fork: foxjony, 03.02.2023
 
 package main
@@ -37,10 +37,6 @@ type command struct {
 	args   []string
 }
 
-// conn.RemoteAddr().String() = "192.168.0.193:52626"
-// conn.RemoteAddr().String() = "192.168.0.193:52628"
-// conn: &{{%!s(*net.netFD=&{{{0 0 0} 4 {281472834653752} <nil> 0 0 true true false} 10 1 false tcp 0x400008a630 0x400008a660})}}
-// conn: &{{%!s(*net.netFD=&{{{0 0 0} 6 {281472834653544} <nil> 0 0 true true false} 10 1 false tcp 0x40000e4030 0x40000e4060})}}
 type client struct {
 	conn     net.Conn
 	user     string
