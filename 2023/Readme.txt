@@ -4,8 +4,7 @@
 https://www.youtube.com/watch?v=Sphme0BqJiY
 https://github.com/plutov/packagemain/tree/master/20-tcp-chat
 
-
-			=== Команди Сервера ===
+	=== Команди Сервера ===
 
 /user <name> 		- Set a Name, otherwise user will stay Guest.
 			  Задати ім'я, інакше користувач залишиться гостем.
