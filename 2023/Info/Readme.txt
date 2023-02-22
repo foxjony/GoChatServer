@@ -1,5 +1,5 @@
 ﻿
-	=== Go TCP Chat Server (178.238.225.218 port 50013) ===
+	=== Go TCP Chat Server ===
 
 https://www.youtube.com/watch?v=Sphme0BqJiY
 https://github.com/plutov/packagemain/tree/master/20-tcp-chat
